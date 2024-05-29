@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ITExpertise from './Management/ITExpertise';
 
 function StockMarket() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -16,7 +15,7 @@ function StockMarket() {
   justifyContent: 'center',
   alignItems: 'center',
   height: '100vh',
-  position: 'fixed',
+  position: 'relative',
     top: 0,
     right: 500,
 };
@@ -231,7 +230,7 @@ function StockMarket() {
 
         case 'FM':
             return(
-                <div className="modal" style={{zIndex:'3'}}>
+                <div className="modal" >
                     <div className="small-card">
                         <h4>Financial mesurement</h4>
                         <button className = 'FCbtn' onClick={()=>setActiveFMContent('FMcontent1')}>Long-term market returns worse after experienced data breaches</button>
@@ -258,7 +257,7 @@ function StockMarket() {
 
   return (
     <div className="StockMarket" style={StockMarketStyle}>
-        <div className="flip-card-DM" style={{zIndex:'0',top:"170px"}} onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+        <div className="flip-card-DSM" onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
             <div className={`card-inner ${isFlipped ? 'is-flipped' : ''}`}>
                 <div className="card-front">
                     Stock Market

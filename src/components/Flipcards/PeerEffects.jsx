@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ITExpertise from './Management/ITExpertise';
 
 function PeerEffects() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -13,7 +12,7 @@ function PeerEffects() {
   justifyContent: 'center',
   alignItems: 'center',
   height: '100vh',
-  position: 'fixed',
+  position: 'relative',
     top: 500,
     right: 280,
 };
@@ -103,7 +102,7 @@ function PeerEffects() {
 
   return (
     <div className="PeerEffects" style={PeerEffectsStyle}>
-        <div className="flip-card-DM" style={{height:'150px',top:'210px'}} onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+        <div className="flip-card-DP"  onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
             <div className={`card-inner ${isFlipped ? 'is-flipped' : ''}`}>
                 <div className="card-front">
                     Peer Effects

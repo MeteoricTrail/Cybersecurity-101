@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ITExpertise from './Management/ITExpertise';
 
 function Reputation() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -15,7 +14,7 @@ function Reputation() {
   justifyContent: 'center',
   alignItems: 'center',
   height: '100vh',
-  position: 'fixed',
+  position: 'relative',
     top: 0,
     right: 280,
 };
@@ -157,7 +156,7 @@ function Reputation() {
 
   return (
     <div className="Reputation" style={ReputationStyle}>
-        <div className="flip-card-DM" style={{top:'170px',height:'300px'}} onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+        <div className="flip-card-DR" onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
             <div className={`card-inner ${isFlipped ? 'is-flipped' : ''}`}>
                 <div className="card-front">
                     Reputation

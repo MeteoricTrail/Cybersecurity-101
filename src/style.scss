@@ -123,8 +123,16 @@
         }
 
         .Roadmap{
-            padding-top: 90px;
+            padding-top: 0px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* 确保 Roadmap div 占满整个视口 */
+            width: 100vw; /* 确保 Roadmap div 占满整个视口 */
+            overflow: hidden; /* 禁止 Roadmap 内部滚动 */
+            position: relative; /* 使子元素的定位相对于这个元素 */
 
             .flip-card-DM{
                 width: 200px;
@@ -133,17 +141,65 @@
                 position: absolute;
                 top: 150px;
                 left: 30px;
-                z-index: 0;
             }
             .flip-card-DFO{
                 width: 200px;
-                height: 400px;
+                height: 300px;
                 perspective: 1000px; /* 创建3D效果 */
                 position: absolute;
-                top: 150px;
+                top: 170px;
                 left: 250px;
+                z-index: 0;
             }
-            
+            .flip-card-DIT{
+                width: 420px;
+                height: 400px;
+                perspective: 1000px; /* 创建3D效果 */
+                position: fixed;
+                top: 500px;
+                left: 30px;
+                z-index: 0;
+            }
+            .flip-card-DSM{
+                width: 200px;
+                height: 400px;
+                perspective: 1000px; /* 创建3D效果 */
+                position: fixed;
+                top: 170px;
+                right: 270px;
+            }
+            .flip-card-DR{
+                width: 200px;
+                height: 250px;
+                perspective: 1000px; /* 创建3D效果 */
+                position: fixed;
+                top: 170px;
+                right: 50px;
+            }
+            .flip-card-DCFO{
+                width: 200px;
+                height: 320px;
+                perspective: 1000px; /* 创建3D效果 */
+                position: fixed;
+                top: 580px;
+                right: 270px;
+            }
+            .flip-card-DCM{
+                width: 200px;
+                height: 260px;
+                perspective: 1000px; /* 创建3D效果 */
+                position: fixed;
+                top: 430px;
+                right: 50px;
+            }
+            .flip-card-DP{
+                width: 200px;
+                height: 200px;
+                perspective: 1000px; /* 创建3D效果 */
+                position: fixed;
+                top: 700px;
+                right: 50px;
+            }
             .card-inner {
                 width: 100%;
                 height: 100%;
@@ -161,15 +217,23 @@
                 justify-content: center;
                 text-align: center;
                 position: absolute;
+                line-height: 1.5;
             }
               
             .card-front {
                 background-color: #f0f0f0; /* 浅灰色背景 */
                 font-size: 24px; 
-                z-index: 2; /* 确保前面在上方 */
+                z-index: 1; /* 确保前面在上方 */
                 border-radius: 10px;
+                flex-direction: 'column';
             }
               
+            .icon-and-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                line-height: 2; /* 可选：居中对齐 */
+              }
             .card-back {
                 background-color: #f1f1f1;
                 flex-direction: column; /* 链接竖直排列 */
@@ -177,6 +241,7 @@
                 /*padding: 20px; /* 添加内边距 */
                 transform: rotateY(180deg);
                 border-radius: 10px;
+                font-size: large; 
             }
               
             .is-flipped {
@@ -193,6 +258,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                z-index: 10;
             }
             
             .FCbtn{
@@ -206,6 +272,8 @@
                 border-radius: 10px;
                 background-color: #fff;
                 border: 1px solid #ddd;
+                z-index: 9999;
+                font-size: large;
             }
             
             .small-card {
@@ -216,18 +284,65 @@
                 width: 20%; /* 小卡片宽度 */
                 height: 70vh; /* 小卡片高度 */
                 flex-direction: column;
-                z-index: 100;
+                background-color: #e0e0e0;
+                display: flex;
+                flex: auto;
+                overflow: auto; 
+                
             }
-            
+            .small-card-text{
+                padding: 20px;
+                margin-left: 20px;
+                font-size: auto;
+                line-height: 2;
+                text-align: justify; /* 两端对齐 */
+                text-indent: 2em; /* 首行缩进 2 个字符 */
+            }
+            .small-card-text::first-letter {
+                font-size: 2em; 
+                color: black;
+                line-height: 1;
+            }
+            .small-card-text p {
+                margin: 0 0 5px; 
+            }
             .large-card {
                 top: 150px;
                 right: 100px;
                 position: fixed;
                 width: 60%; /* 大卡片宽度 */
                 height: 70vh; /* 大卡片高度 */
-                z-index: 100;
+                flex-direction: column; 
+                margin-bottom: 10px;
+                background-color: #e0e0e0;
+                display: flex;
+                flex: auto;
+                overflow: auto; 
+                flex-direction: column;
             }
-            
+              .title {
+                margin: 0;
+                padding: 10px 10px;
+                flex-direction: column;
+                width: 100%;
+                height: 10%;
+              }
+              
+              .content {
+                margin-top: 10px;
+                padding-left: 40px; /* 缩进 */
+              }
+              
+              .content h3 {
+                margin: 10px 0;
+                align-items: left;
+                padding-left: 20px;
+              }
+              
+              .description {
+                margin-top: 10px;
+                line-height: 1.2; /* 行间距 */
+              }
             .close-btn {
                 position: absolute;
                 top: 120px; /* 调整为合适的位置 */
@@ -252,7 +367,57 @@
               align-items: center;
               width: 100%;
             }
-        }
+            .legend {
+                margin-top: 20px;
+              }
+              
+              .legend-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+              }
+              
+              .legend-text {
+                font-size: 16px;
+                margin-right: 10px;
+              }
+              
+              .legend-line {
+                flex-grow: 1;
+                height: 2px;
+                margin-right: 10px;
+                background-color: black;
+              }
+              
+              .legend-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+              }
+              
+              .positive-dot {
+                background-color: green;
+              }
+              
+              .neutral-dot {
+                background-color: gray;
+              }
+              
+              .negative-dot {
+                background-color: red;
+              }
+              .management-icon {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 10px; /* 添加下边距使图标和文字之间有间隔 */
+              }
+              .icon-section {
+                margin-top: 20px;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+              }
+        }   
 
     }
 }

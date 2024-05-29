@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
 
         <div className="game_btn">
-          <Link className="link" to="/game">
+          <Link className="link" to="https://iamulaodou.itch.io/cyber101">
             <button>Game</button>
           </Link>
         </div>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ITExpertise from './Management/ITExpertise';
 
 function ConManagement() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -14,10 +13,8 @@ function ConManagement() {
   justifyContent: 'center',
   alignItems: 'center',
   height: '100vh',
-  position: 'fixed',
-    top: 250,
-    right: 280,
-    zIndex: 1,
+  position: 'relative',
+
 };
 
   const handleETClick = () => {
@@ -123,7 +120,7 @@ function ConManagement() {
 
   return (
     <div className="ConManagement" style={ConManagementStyle}>
-        <div className="flip-card-DM" style={{top:'240px',height:'200px'}} onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+        <div className="flip-card-DCM" onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
             <div className={`card-inner ${isFlipped ? 'is-flipped' : ''}`}>
                 <div className="card-front">
                     Management and Board

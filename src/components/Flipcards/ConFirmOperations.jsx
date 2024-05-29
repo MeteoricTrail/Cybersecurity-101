@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ITExpertise from './Management/ITExpertise';
 
 function ConFirmOperations() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -10,15 +9,7 @@ function ConFirmOperations() {
   const [activeIVContent, setActiveIVContent] = useState('default');
   const [activeAAContent, setActiveAAContent] = useState('default');
 
-  const ConFirmOperationsStyle = {  
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  height: '100vh',
-  position: 'fixed',
-    top: 250,
-    right: 500,
-};
+
 
   const handleFMClick = () => {
     setIsModalOpen(true);
@@ -185,7 +176,7 @@ function ConFirmOperations() {
 
   return (
     <div className="ConFirmOperations" style={ConFirmOperationsStyle}>
-        <div className="flip-card-DM" style={{top:'240px'}} onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+        <div className="flip-card-DCFO" onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
             <div className={`card-inner ${isFlipped ? 'is-flipped' : ''}`}>
                 <div className="card-front">
                     Firm Operations
@@ -207,3 +198,13 @@ function ConFirmOperations() {
 }
 
 export default ConFirmOperations;
+
+const ConFirmOperationsStyle = {  
+    display: 'block',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    position: 'relative',
+      top: 0,
+      right: 0,
+  };

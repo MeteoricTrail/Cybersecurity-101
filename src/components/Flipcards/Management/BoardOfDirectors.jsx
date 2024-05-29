@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ITExpertise() {
+function BoardOfDirectors() {
   return (
     <div>
       <h1>IT Expertise</h1>
@@ -26,4 +26,4 @@ function ITExpertise() {
   )
 }
 
-export default ITExpertise
+export default BoardOfDirectors

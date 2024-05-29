@@ -2,7 +2,7 @@ import React from 'react'
 
 const Game = () => {
   return (
-    <div>Game</div>
+    <a href="https://iamulaodou.itch.io/cyber101"></a>
   )
 }
 

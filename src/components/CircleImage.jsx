@@ -2,8 +2,8 @@ import React from 'react';
 
 const CircularGraphic = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' ,}}>
-      <svg width="400" height="400" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <div style={{ display: 'block', justifyContent: 'center', alignItems: 'center', height: '100vh' ,position:'absolute', top:'300px'}}>
+      <svg width="500" height="500" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
             <polygon points="0 0, 10 3, 0 5" fill="#333" />

@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import ITExpertise from './Management/ITExpertise';
-
 function InstitutionalEnvironmental() {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);

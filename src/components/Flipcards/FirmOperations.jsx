@@ -132,8 +132,8 @@ function FirmOperations() {
 
 
   return (
-    <div className="firmOperations" style={FOStyle}>
-        <div className="flip-card-DFO" style={{position:"absoulte", top:'170px'}} onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+    <div className="firmOperations" style={FOStyle} >
+        <div className="flip-card-DFO" style={{position:'fixed'}}onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
             <div className={`card-inner ${isFlipped ? 'is-flipped' : ''}`}>
                 <div className="card-front">
                     FirmOperations
@@ -160,8 +160,7 @@ const FOStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    position: 'fixed',
+    position: 'relative',
     top: 0,
     left: 0,
-    zIndex: 1,
 };

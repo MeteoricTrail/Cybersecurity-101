@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ITExpertise from './Management/ITExpertise';
 
 function ITPractices() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -17,9 +16,10 @@ function ITPractices() {
   justifyContent: 'center',
   alignItems: 'center',
   height: '100vh',
-  position: 'fixed',
+  position: 'relative',
     top: 250,
     left: 0,
+    zIndex: 2,
 };
 
   const handleCDClick = () => {
@@ -239,7 +239,7 @@ function ITPractices() {
 
   return (
     <div className="ITPractices" style={ITPracticesStyle}>
-        <div className="flip-card-DFO" style={{left:'30px',top:'240px'}} onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+        <div className="flip-card-DIT" onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
             <div className={`card-inner ${isFlipped ? 'is-flipped' : ''}`}>
                 <div className="card-front">
                     IT Practices
