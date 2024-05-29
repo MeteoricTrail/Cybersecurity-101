@@ -1,0 +1,258 @@
+.app{
+    display: flex;
+    justify-content: center;
+    .container{
+        width: 100%;
+
+        //navbar
+        .navbar{
+            .container{
+                position: fixed;
+                background-color: black;
+                padding: 10px 0px;
+                top:0%;
+                height: 10vh;
+                z-index: 100;
+                button{
+                    display: inline-block;
+                    padding: 10px 20px;
+                    border: 2px solid black;
+                    background-color: black;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: color 0.3s;
+                    &:hover {
+                        background-color: black;
+                        color:rgb(150, 180, 210);
+                        border-color: black;
+                        text-decoration: underline;
+                    }
+                }
+
+                //.logo{}
+                .home_btn{
+                    position: relative;
+                    button{
+                        position: fixed;
+                        top: 30px;
+                        left: 825px; 
+
+                    }
+                }
+                .roadmap_btn{
+                    position: relative;
+                    button{
+                        position: fixed;
+                        top: 30px;
+                        left: 920px; 
+
+                    }
+                }
+                .game_btn{
+                    position: relative;
+                    button{
+                        position: fixed;
+                        top: 30px;
+                        left: 1045px; 
+
+                    }
+                }
+
+                .resources_btn{
+                    position: relative;
+                    button{
+                        position: fixed;
+                        top: 30px;
+                        left: 1142px; 
+
+                    }
+                    .resources_unfold{
+                        position: absolute;
+                        top: 8vh;
+                        left: 0px;
+                        width: 100%;
+                        background-color:black;
+                        z-index: 999;
+                        color: white;
+                    }
+                }
+                
+                .about_btn{
+                    position: relative;
+                    button{
+                        position: fixed;
+                        top: 30px;
+                        left: 1285px; 
+
+                    }
+                    .about_unfold{
+                        position: absolute;
+                        top: 8vh;
+                        left: 0px;
+                        width: 100%;
+                        background-color:black;
+                        z-index: 999;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .home{
+            padding-top: 90px;
+            width: 100%;
+            
+            .title{
+                height: 600px;
+                background-image: url(./images/test.jpg);
+                overflow: hidden;
+                h{
+                    display: block;
+                    padding-top: 200px;
+                    padding-left: 50px;
+                    color: white;
+                    font-size: 80px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .Roadmap{
+            padding-top: 90px;
+            width: 100%;
+
+            .flip-card-DM{
+                width: 200px;
+                height: 300px;
+                perspective: 1000px; /* 创建3D效果 */
+                position: absolute;
+                top: 150px;
+                left: 30px;
+                z-index: 0;
+            }
+            .flip-card-DFO{
+                width: 200px;
+                height: 400px;
+                perspective: 1000px; /* 创建3D效果 */
+                position: absolute;
+                top: 150px;
+                left: 250px;
+            }
+            
+            .card-inner {
+                width: 100%;
+                height: 100%;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                position: relative;
+            }
+              
+            .card-front, .card-back {
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                position: absolute;
+            }
+              
+            .card-front {
+                background-color: #f0f0f0; /* 浅灰色背景 */
+                font-size: 24px; 
+                z-index: 2; /* 确保前面在上方 */
+                border-radius: 10px;
+            }
+              
+            .card-back {
+                background-color: #f1f1f1;
+                flex-direction: column; /* 链接竖直排列 */
+                justify-content: space-around; /* 分散对齐 */
+                /*padding: 20px; /* 添加内边距 */
+                transform: rotateY(180deg);
+                border-radius: 10px;
+            }
+              
+            .is-flipped {
+                transform: rotateY(180deg); /* 翻转180度 */
+            }
+            
+            .modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .FCbtn{
+                margin: 20px;
+                font-size: 20px;
+            }
+              
+            .small-card, .large-card {
+                display: flex;
+                justify-content: start;
+                border-radius: 10px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+            }
+            
+            .small-card {
+                top: 150px;
+                left: 100px;
+                position: fixed;
+                align-items: center;
+                width: 20%; /* 小卡片宽度 */
+                height: 70vh; /* 小卡片高度 */
+                flex-direction: column;
+                z-index: 100;
+            }
+            
+            .large-card {
+                top: 150px;
+                right: 100px;
+                position: fixed;
+                width: 60%; /* 大卡片宽度 */
+                height: 70vh; /* 大卡片高度 */
+                z-index: 100;
+            }
+            
+            .close-btn {
+                position: absolute;
+                top: 120px; /* 调整为合适的位置 */
+                right: 40px; /* 放置在右上角 */
+                cursor: pointer;
+                background-color: #ccc;
+                width: 30px; /* 设置按钮大小 */
+                height: 30px; /* 保持按钮为圆形 */
+                border-radius: 50%; /* 圆形按钮 */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px; /* 调整X图标的大小 */
+                line-height: 1; /* 调整行高以确保X居中 */
+                z-index: 20;
+            }
+              
+            .card-container {
+              position: relative; /* 为了绝对定位取消按钮 */
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              width: 100%;
+            }
+        }
+
+    }
+}
