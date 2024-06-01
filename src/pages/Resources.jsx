@@ -6,6 +6,7 @@ const styles = {
     backgroundColor: 'black',
     color: 'white',
     padding: '20px',
+    textAlign: 'right',
   },
   title: {
     color: 'white',
@@ -28,7 +29,7 @@ const styles = {
 const Resources = () => {
   return (
     <div style={styles.resources}>
-      <h style={styles.title}>Resources</h>
+      {/* <h style={styles.title}>Resources</h> */}
       <div style={{height:'10px'}}></div>
       <a
         href='https://business.adelaide.edu.au/'

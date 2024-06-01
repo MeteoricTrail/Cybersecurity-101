@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import BoardOfDirectors from './Management/BoardOfDirectors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 
@@ -36,31 +35,7 @@ function Management() {
     setActiveEOContent('default');
   }
 
-  const renderBDContent = () => {
-    switch (activeBDContent) {
-        case 'BDcontent1':
-            return <BoardOfDirectors/>;
-        default:
-            return null;
-    }
-  };
 
-  const renderEOContent = () => {
-    switch (activeEOContent) {
-        case 'EOcontent1':
-            return <div>content 1</div>;
-        case 'EOcontent2':
-            return <div>content 2</div>;
-        case 'EOcontent3':
-            return <div>content 3</div>;
-        case 'EOcontent4':
-            return <div>content 4</div>;
-        case 'EOcontent5':
-            return <div>content 5</div>;
-        default:
-            return null;
-    }
-  };
 
   const renderModal = () => {
     switch (activeModalContent){
@@ -70,10 +45,8 @@ function Management() {
                     <div className="small-card">
                         <h3>Management Attributes</h3>
                         <div className='small-card-text'>The attributes of managers and directors play a significant role in determining corporate cybersecurity
-                                practices and the resultant risk.
-                                &nbsp;&nbsp;Corporate managers are responsible for overseeing corporate cybersecurity strategies by
-                                making decisions about cybersecurity investment and shaping cybersecurity policies and practices. And boards of directors also play a vital role in determining corporate cybersecurity practices and,
-                                consequently, firm exposure to cybersecurity risk.</div>
+                                practices and the resultant risk. <br />
+                                &nbsp;&nbsp;Corporate managers are responsible for overseeing corporate cybersecurity strategies by making decisions about cybersecurity investment and shaping cybersecurity policies and practices. And boards of directors also play a vital role in determining corporate cybersecurity practices and, consequently, firm exposure to cybersecurity risk.</div>
                     <div className="legend">
                         <h4>Determinats influence</h4>
                         <div className="legend-item">
@@ -105,7 +78,7 @@ function Management() {
                             <div className="legend-item"><span className="legend-dot positive-dot"></span><h3>&nbsp;&nbsp;Presence of Risk Management Committee on the board </h3></div>
                             <p className="description">Kamiya et al. <a href="https://www.sciencedirect.com/science/article/pii/S0304405X20300143">(2021)</a> suggest that having a Risk Management Committee on the board correlates with reduced risk exposure.</p>
                             <div className="legend-item"><span className="legend-dot positive-dot"></span><h3>&nbsp;&nbsp;Director IT expertise on audit committee</h3></div>
-                            <p className="description">Directors with IT expertise on the board help reduce the risk of data breaches, particularly if IT experts serve on audit committees <a href="https://doi.org/10.2308/ISYS-2020-076. 10.2308/isys-2020-076">(Chen et al., 2022)</a></p>
+                            <p className="description">Directors with IT expertise on the board help reduce the risk of data breaches, particularly if IT experts serve on audit committees <a href="https://doi.org/10.2308/ISYS-2020-076">(Chen et al., 2022)</a></p>
                             <div className="legend-item"><span className="legend-dot positive-dot"></span><h3>&nbsp;&nbsp;Board Response to Data Protection Law Change</h3></div>
                             <p className="description">Firms also respond to cybersecurity regulations, by increasing the number of IT experts on their boards, which in turn reduces the risk of data breaches <a href="https://doi.org/10.1111/1911-3846.12735">(Klein et al., 2022)</a></p>
                             <div className="legend-item"><span className="legend-dot positive-dot"></span><h3>&nbsp;&nbsp;Director Financial Expertise</h3></div>
@@ -120,15 +93,44 @@ function Management() {
             return(
                 <div className="modal">
                     <div className="small-card">
-                        <h4>Board of Directors</h4>
-                        <button className = 'FCbtn' onClick={()=>setActiveEOContent('EOcontent1')}>Independence</button>
-                        <button className = 'FCbtn' onClick={()=>setActiveEOContent('EOcontent2')}>Gender Diversity</button>
-                        <button className = 'FCbtn' onClick={()=>setActiveEOContent('EOcontent3')}>Tenure</button>
-                        <button className = 'FCbtn' onClick={()=>setActiveEOContent('EOcontent4')}>IT Expertise</button>
-                        <button className = 'FCbtn' onClick={()=>setActiveEOContent('EOcontent5')}>Board Structure</button>
+                    <h3>Management Attributes</h3>
+                        <div className='small-card-text'>The attributes of managers and directors play a significant role in determining corporate cybersecurity
+                                practices and the resultant risk. <br />
+                                &nbsp;&nbsp;Corporate managers are responsible for overseeing corporate cybersecurity strategies by
+                                making decisions about cybersecurity investment and shaping cybersecurity policies and practices. And boards of directors also play a vital role in determining corporate cybersecurity practices and,
+                                consequently, firm exposure to cybersecurity risk.
+                        </div>
+                        <div className="legend">
+                            <h4>Determinats influence</h4>
+                                <div className="legend-item">
+                                    <span className="legend-text">Reduce risks</span>
+                                    <span className="legend-line"></span>
+                                    <span className="legend-dot positive-dot"></span>
+                                </div>
+                                <div className="legend-item">
+                                    <span className="legend-text">Neutral</span>
+                                    <span className="legend-line"></span>
+                                    <span className="legend-dot neutral-dot"></span>
+                                </div>
+                                <div className="legend-item">
+                                    <span className="legend-text">Increase risks</span>
+                                    <span className="legend-line"></span>
+                                    <span className="legend-dot negative-dot"></span>
+                                </div>
+                        </div>
                     </div>
                     <div className="large-card">
-                        {renderEOContent()}
+                    <h2 className="title">Determinants —— Executive Officers</h2>
+                        <div className="content">
+                            <div className="legend-item"><span className="legend-dot negative-dot"></span><h3>&nbsp;&nbsp;SChief Information Officer</h3></div>
+                            <p className="description">Evidence shows that firms with a CIO experience increased risk of data breaches <a href="https://www.sciencedirect.com/science/article/pii/S1467089521000348">(Smith et al., 2021)</a> , which may be attributable to the fact that firms facing higher inherent exposure to cyberattacks are more likely to appoint CIOs.</p>
+                            <div className="legend-item"><span className="legend-dot positive-dot"></span><h3>&nbsp;&nbsp;IT Executive in Top Management Team </h3></div>
+                            <p className="description">Some researchers find IT executives in the TMT reduce the likelihood of data breaches <a href="https://doi.org/10.2308/isys-50339">(Kwon et al.,2013;</a> <a href="https://doi.org/10.1287/isre.2020.0986">Haislip et al., 2021)</a></p>
+                            <div className="legend-item"><span className="legend-dot positive-dot"></span><h3>&nbsp;&nbsp;IT Executive Compensation</h3></div>
+                            <p className="description">IT executives enjoy higher compensation relative to other executives, which could signal a firm’s prioritization of IT security <a href="https://doi.org/10.2308/isys-50339">(Kwon et al., 2013)</a></p>
+                            <div className="legend-item"><span className="legend-dot neutral-dot"></span><h3>&nbsp;&nbsp;Post-Data Breach CIO/CTO Turnover</h3></div>
+                            <p className="description">There is also inconclusive evidence on whether firing the CIO following a cyberattack affects the likelihood of future breaches: some find evidence of reduced future risk after CIO turnover <a href="https://www.sciencedirect.com/science/article/pii/S0378720621000033">(Li et al., 2021b)</a>, whereas others find no significant change <a href="https://doi.org/10.1287/stsc.2020.0106">(Say and Vasudeva, 2020)</a>. Therefore, the role of IT executives remains to be investigated.</p>
+                        </div>
                     </div>
                     <span className="close-btn" onClick={handleClose}>x</span>
                 </div>

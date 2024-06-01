@@ -120,6 +120,85 @@
                     font-weight: 600;
                 }
             }
+            .projectinfo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+                padding: 20px;
+                background-color: #f8f8f8;
+                color: #666;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin: 20px 0;
+              }
+              
+              .content {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: space-around;
+                align-items: center;
+              }
+              
+              .supervisors, .team-members {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                flex: 1;
+              }
+              
+              .supervisor, .member {
+                text-align: center;
+              }
+              
+              .supervisor-img, .member-img {
+                border-radius: 50%;
+                margin-bottom: 10px;
+              }
+              
+              .supervisor-img {
+                width: 100px;
+                height: 100px;
+              }
+              .member a{
+                max-width: 100%; /* 链接最大宽度 */
+                word-wrap: break-word; /* 允许内容换行 */
+                text-decoration: none;
+                color: #236eb5;
+              }
+              .member a:hover {
+                color: #8d7ada; /* 悬停颜色：金色 */
+                text-decoration: underline; /* 悬停时显示下划线 */
+              }
+              .member-img {
+                width: 80px;
+                height: 80px;
+                margin-right: 10px;
+              }
+              
+              .center-content {
+                text-align: center;
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              }
+              
+              .center-content h2 {
+                font-size: 2em;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #333;
+                display: inline-block;
+                padding-bottom: 5px;
+              }
+              
+              .center-content h3 {
+                font-size: 1.2em;
+                font-weight: normal;
+              }
+              
         }
 
         .Roadmap{
@@ -136,7 +215,7 @@
 
             .flip-card-DM{
                 width: 200px;
-                height: 300px;
+                height: 400px;
                 perspective: 1000px; /* 创建3D效果 */
                 position: absolute;
                 top: 150px;
@@ -144,7 +223,7 @@
             }
             .flip-card-DFO{
                 width: 200px;
-                height: 300px;
+                height: 400px;
                 perspective: 1000px; /* 创建3D效果 */
                 position: absolute;
                 top: 170px;
@@ -153,10 +232,10 @@
             }
             .flip-card-DIT{
                 width: 420px;
-                height: 400px;
+                height: 300px;
                 perspective: 1000px; /* 创建3D效果 */
                 position: fixed;
-                top: 500px;
+                top: 580px;
                 left: 30px;
                 z-index: 0;
             }
@@ -170,7 +249,7 @@
             }
             .flip-card-DR{
                 width: 200px;
-                height: 250px;
+                height: 300px;
                 perspective: 1000px; /* 创建3D效果 */
                 position: fixed;
                 top: 170px;
@@ -186,10 +265,10 @@
             }
             .flip-card-DCM{
                 width: 200px;
-                height: 260px;
+                height: 200px;
                 perspective: 1000px; /* 创建3D效果 */
                 position: fixed;
-                top: 430px;
+                top: 485px;
                 right: 50px;
             }
             .flip-card-DP{
@@ -243,6 +322,17 @@
                 border-radius: 10px;
                 font-size: large; 
             }
+            .card-back a {
+                padding: 10px; /* 增加内边距 */
+                max-width: 100%; /* 链接最大宽度 */
+                word-wrap: break-word; /* 允许内容换行 */
+                text-decoration: none;
+                color: #236eb5;
+            }
+            .card-back a:hover {
+                color: #8d7ada; /* 悬停颜色：金色 */
+                text-decoration: underline; /* 悬停时显示下划线 */
+            }
               
             .is-flipped {
                 transform: rotateY(180deg); /* 翻转180度 */
@@ -281,7 +371,7 @@
                 left: 100px;
                 position: fixed;
                 align-items: center;
-                width: 20%; /* 小卡片宽度 */
+                width:25%; /* 小卡片宽度 */
                 height: 70vh; /* 小卡片高度 */
                 flex-direction: column;
                 background-color: #e0e0e0;
@@ -294,7 +384,7 @@
                 padding: 20px;
                 margin-left: 20px;
                 font-size: auto;
-                line-height: 2;
+                line-height: 1.5;
                 text-align: justify; /* 两端对齐 */
                 text-indent: 2em; /* 首行缩进 2 个字符 */
             }
@@ -342,7 +432,20 @@
               .description {
                 margin-top: 10px;
                 line-height: 1.2; /* 行间距 */
+                text-indent: 2em;
+                text-align: justify;
+                padding-right: 20px;
               }
+              .description a{
+                max-width: 100%; /* 链接最大宽度 */
+                word-wrap: break-word; /* 允许内容换行 */
+                text-decoration: none;
+                color: #236eb5;
+              }
+                .description a:hover {
+                    color: #8d7ada; /* 悬停颜色：金色 */
+                    text-decoration: underline; /* 悬停时显示下划线 */
+                }
             .close-btn {
                 position: absolute;
                 top: 120px; /* 调整为合适的位置 */
@@ -417,6 +520,13 @@
                 gap: 20px;
                 justify-content: center;
               }
+              .red-text {
+                color: red;
+            }
+            
+            .green-text {
+                color: green;
+            }
         }   
 
     }
