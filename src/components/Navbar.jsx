@@ -62,8 +62,8 @@ const Navbar = () => {
             About
           </button>
           {isHovered_about && (
-            <div className="about_unfold" onMouseLeave={handleLeave_about}>
-              <p>some content</p>
+            <div className="about_unfold" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} onMouseLeave={handleLeave_about}>
+              <p style={{textAlign:'justify',width:'800px'}}>The project “Cybersecurity 101” is developed as an industry outreach resource to disseminate the academic knowledge derived from a systematic review paper authored by Chelsea Liu and M. Ali Babar entitled “Cybersecurity Risk and Data Breaches for Corporations: A Systematic Review of Empirical Research”. Content of this website contains quotes from the aforementioned paper, as well as citations and references to other academic studies included in the systematic review. </p>
             </div>
           )}
         </div>  
