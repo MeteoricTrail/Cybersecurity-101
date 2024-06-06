@@ -64,6 +64,7 @@ const Home = () => {
           <br />
           <p>Huanwei Xu</p>
           <p>Master of Computing and Innovation</p>
+          <a href="https://www.linkedin.com/in/huanwei-gray-xu-4a384421a/">Linkedin</a>
         </div>
       </div>
     </div>
